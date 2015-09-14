@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:tns="http://ws.hospitalitaliano.org.ar/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TerminologiaWSService" targetNamespace="http://ws.hospitalitaliano.org.ar/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://www1.hospitalitaliano.org.ar:8082/TerminologiaWSMultiContextoTest/TerminologiaWSService?xsd=1" namespace="http://ws.hospitalitaliano.org.ar/" />
+    </xsd:schema>
+  </types>
+  <message name="obtenerCodigoTesauro">
+    <part name="parameters" element="tns:obtenerCodigoTesauro" />
+  </message>
+  <message name="obtenerCodigoTesauroResponse">
+    <part name="parameters" element="tns:obtenerCodigoTesauroResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
+  </message>
+  <message name="obtenerClasificador">
+    <part name="parameters" element="tns:obtenerClasificador" />
+  </message>
+  <message name="obtenerClasificadorResponse">
+    <part name="parameters" element="tns:obtenerClasificadorResponse" />
+  </message>
+  <message name="obtenerConceptXDescID">
+    <part name="parameters" element="tns:obtenerConceptXDescID" />
+  </message>
+  <message name="obtenerConceptXDescIDResponse">
+    <part name="parameters" element="tns:obtenerConceptXDescIDResponse" />
+  </message>
+  <message name="ObtenerModeladoHIBADescription">
+    <part name="parameters" element="tns:ObtenerModeladoHIBADescription" />
+  </message>
+  <message name="ObtenerModeladoHIBADescriptionResponse">
+    <part name="parameters" element="tns:ObtenerModeladoHIBADescriptionResponse" />
+  </message>
+  <message name="ObtenerCodigoSNMapeo">
+    <part name="parameters" element="tns:ObtenerCodigoSNMapeo" />
+  </message>
+  <message name="ObtenerCodigoSNMapeoResponse">
+    <part name="parameters" element="tns:ObtenerCodigoSNMapeoResponse" />
+  </message>
+  <message name="obtenerMapSetsCorrientes">
+    <part name="parameters" element="tns:obtenerMapSetsCorrientes" />
+  </message>
+  <message name="obtenerMapSetsCorrientesResponse">
+    <part name="parameters" element="tns:obtenerMapSetsCorrientesResponse" />
+  </message>
+  <message name="obtenerMembers">
+    <part name="parameters" element="tns:obtenerMembers" />
+  </message>
+  <message name="obtenerMembersResponse">
+    <part name="parameters" element="tns:obtenerMembersResponse" />
+  </message>
+  <message name="obtenerListaDeSubsets">
+    <part name="parameters" element="tns:obtenerListaDeSubsets" />
+  </message>
+  <message name="obtenerListaDeSubsetsResponse">
+    <part name="parameters" element="tns:obtenerListaDeSubsetsResponse" />
+  </message>
+  <message name="obtenerGenericosPorTxtYSubset">
+    <part name="parameters" element="tns:obtenerGenericosPorTxtYSubset" />
+  </message>
+  <message name="obtenerGenericosPorTxtYSubsetResponse">
+    <part name="parameters" element="tns:obtenerGenericosPorTxtYSubsetResponse" />
+  </message>
+  <message name="obtenerSubsetsXDescId">
+    <part name="parameters" element="tns:obtenerSubsetsXDescId" />
+  </message>
+  <message name="obtenerSubsetsXDescIdResponse">
+    <part name="parameters" element="tns:obtenerSubsetsXDescIdResponse" />
+  </message>
+  <message name="obtenerAtributosDeDescription">
+    <part name="parameters" element="tns:obtenerAtributosDeDescription" />
+  </message>
+  <message name="obtenerAtributosDeDescriptionResponse">
+    <part name="parameters" element="tns:obtenerAtributosDeDescriptionResponse" />
+  </message>
+  <message name="obtenerOfertaTextos">
+    <part name="parameters" element="tns:obtenerOfertaTextos" />
+  </message>
+  <message name="obtenerOfertaTextosResponse">
+    <part name="parameters" element="tns:obtenerOfertaTextosResponse" />
+  </message>
+  <message name="obtenerOfertaTextosConCaducidad">
+    <part name="parameters" element="tns:obtenerOfertaTextosConCaducidad" />
+  </message>
+  <message name="obtenerOfertaTextosConCaducidadResponse">
+    <part name="parameters" element="tns:obtenerOfertaTextosConCaducidadResponse" />
+  </message>
+  <message name="obtenerOfertaSimilitud">
+    <part name="parameters" element="tns:obtenerOfertaSimilitud" />
+  </message>
+  <message name="obtenerOfertaSimilitudResponse">
+    <part name="parameters" element="tns:obtenerOfertaSimilitudResponse" />
+  </message>
+  <message name="obtenerDataDescriptionId">
+    <part name="parameters" element="tns:obtenerDataDescriptionId" />
+  </message>
+  <message name="obtenerDataDescriptionIdResponse">
+    <part name="parameters" element="tns:obtenerDataDescriptionIdResponse" />
+  </message>
+  <message name="obtenerAuditoriaTermino">
+    <part name="parameters" element="tns:obtenerAuditoriaTermino" />
+  </message>
+  <message name="obtenerAuditoriaTerminoResponse">
+    <part name="parameters" element="tns:obtenerAuditoriaTerminoResponse" />
+  </message>
+  <message name="obtenerComposicionFarmacoXDescId">
+    <part name="parameters" element="tns:obtenerComposicionFarmacoXDescId" />
+  </message>
+  <message name="obtenerComposicionFarmacoXDescIdResponse">
+    <part name="parameters" element="tns:obtenerComposicionFarmacoXDescIdResponse" />
+  </message>
+  <message name="obtenerPrompting">
+    <part name="parameters" element="tns:obtenerPrompting" />
+  </message>
+  <message name="obtenerPromptingResponse">
+    <part name="parameters" element="tns:obtenerPromptingResponse" />
+  </message>
+  <message name="obtenerOfertaTextosIndependienteSubsetConOfeSubset">
+    <part name="parameters" element="tns:obtenerOfertaTextosIndependienteSubsetConOfeSubset" />
+  </message>
+  <message name="obtenerOfertaTextosIndependienteSubsetConOfeSubsetResponse">
+    <part name="parameters" element="tns:obtenerOfertaTextosIndependienteSubsetConOfeSubsetResponse" />
+  </message>
+  <message name="obtenerOfertaTextosIndependienteSubset">
+    <part name="parameters" element="tns:obtenerOfertaTextosIndependienteSubset" />
+  </message>
+  <message name="obtenerOfertaTextosIndependienteSubsetResponse">
+    <part name="parameters" element="tns:obtenerOfertaTextosIndependienteSubsetResponse" />
+  </message>
+  <message name="ObtenerAltaEfectoAdversoXHallazgoAgenteCausalYSeveridad">
+    <part name="parameters" element="tns:ObtenerAltaEfectoAdversoXHallazgoAgenteCausalYSeveridad" />
+  </message>
+  <message name="ObtenerAltaEfectoAdversoXHallazgoAgenteCausalYSeveridadResponse">
+    <part name="parameters" element="tns:ObtenerAltaEfectoAdversoXHallazgoAgenteCausalYSeveridadResponse" />
+  </message>
+  <message name="ObtenerCodigoAltaEfectoAdversoXAgenteCausalYSeveridad">
+    <part name="parameters" element="tns:ObtenerCodigoAltaEfectoAdversoXAgenteCausalYSeveridad" />
+  </message>
+  <message name="ObtenerCodigoAltaEfectoAdversoXAgenteCausalYSeveridadResponse">
+    <part name="parameters" element="tns:ObtenerCodigoAltaEfectoAdversoXAgenteCausalYSeveridadResponse" />
+  </message>
+  <message name="obtenerCodigoAltaEfectoAdversoXHallazgoYAgenteCausal">
+    <part name="parameters" element="tns:obtenerCodigoAltaEfectoAdversoXHallazgoYAgenteCausal" />
+  </message>
+  <message name="obtenerCodigoAltaEfectoAdversoXHallazgoYAgenteCausalResponse">
+    <part name="parameters" element="tns:obtenerCodigoAltaEfectoAdversoXHallazgoYAgenteCausalResponse" />
+  </message>
+  <message name="ObtenerCodigoAltaEfectoAdversoXAgenteCausal">
+    <part name="parameters" element="tns:ObtenerCodigoAltaEfectoAdversoXAgenteCausal" />
+  </message>
+  <message name="ObtenerCodigoAltaEfectoAdversoXAgenteCausalResponse">
+    <part name="parameters" element="tns:ObtenerCodigoAltaEfectoAdversoXAgenteCausalResponse" />
+  </message>
+  <message name="obtenerFamiliares">
+    <part name="parameters" element="tns:obtenerFamiliares" />
+  </message>
+  <message name="obtenerFamiliaresResponse">
+    <part name="parameters" element="tns:obtenerFamiliaresResponse" />
+  </message>
+  <message name="obtenerClasificadorUnico">
+    <part name="parameters" element="tns:obtenerClasificadorUnico" />
+  </message>
+  <message name="obtenerClasificadorUnicoResponse">
+    <part name="parameters" element="tns:obtenerClasificadorUnicoResponse" />
+  </message>
+  <message name="obtenerMembersConceptoSubset">
+    <part name="parameters" element="tns:obtenerMembersConceptoSubset" />
+  </message>
+  <message name="obtenerMembersConceptoSubsetResponse">
+    <part name="parameters" element="tns:obtenerMembersConceptoSubsetResponse" />
+  </message>
+  <message name="obtenerMembersCohorte">
+    <part name="parameters" element="tns:obtenerMembersCohorte" />
+  </message>
+  <message name="obtenerMembersCohorteResponse">
+    <part name="parameters" element="tns:obtenerMembersCohorteResponse" />
+  </message>
+  <message name="obtenerPresentacionesComercialesXGenerico">
+    <part name="parameters" element="tns:obtenerPresentacionesComercialesXGenerico" />
+  </message>
+  <message name="obtenerPresentacionesComercialesXGenericoResponse">
+    <part name="parameters" element="tns:obtenerPresentacionesComercialesXGenericoResponse" />
+  </message>
+  <message name="obtenerGenericoXPresentacionComercial">
+    <part name="parameters" element="tns:obtenerGenericoXPresentacionComercial" />
+  </message>
+  <message name="obtenerGenericoXPresentacionComercialResponse">
+    <part name="parameters" element="tns:obtenerGenericoXPresentacionComercialResponse" />
+  </message>
+  <message name="obtenerMedicamentoClinicoPorMedicamentoBasico">
+    <part name="parameters" element="tns:obtenerMedicamentoClinicoPorMedicamentoBasico" />
+  </message>
+  <message name="obtenerMedicamentoClinicoPorMedicamentoBasicoResponse">
+    <part name="parameters" element="tns:obtenerMedicamentoClinicoPorMedicamentoBasicoResponse" />
+  </message>
+  <message name="obtenerMedicamentoBasicoPorMedicamentoClinico">
+    <part name="parameters" element="tns:obtenerMedicamentoBasicoPorMedicamentoClinico" />
+  </message>
+  <message name="obtenerMedicamentoBasicoPorMedicamentoClinicoResponse">
+    <part name="parameters" element="tns:obtenerMedicamentoBasicoPorMedicamentoClinicoResponse" />
+  </message>
+  <message name="obtenerOfertaTextosIndependienteSubsetConCaducidadYOfertaSubset">
+    <part name="parameters" element="tns:obtenerOfertaTextosIndependienteSubsetConCaducidadYOfertaSubset" />
+  </message>
+  <message name="obtenerOfertaTextosIndependienteSubsetConCaducidadYOfertaSubsetResponse">
+    <part name="parameters" element="tns:obtenerOfertaTextosIndependienteSubsetConCaducidadYOfertaSubsetResponse" />
+  </message>
+  <message name="obtenerOfertaSimilitudXFrecuenciaUso">
+    <part name="parameters" element="tns:obtenerOfertaSimilitudXFrecuenciaUso" />
+  </message>
+  <message name="obtenerOfertaSimilitudXFrecuenciaUsoResponse">
+    <part name="parameters" element="tns:obtenerOfertaSimilitudXFrecuenciaUsoResponse" />
+  </message>
+  <message name="obtenerOfertaSimilitudIndependienteSubsetConOfeSubset">
+    <part name="parameters" element="tns:obtenerOfertaSimilitudIndependienteSubsetConOfeSubset" />
+  </message>
+  <message name="obtenerOfertaSimilitudIndependienteSubsetConOfeSubsetResponse">
+    <part name="parameters" element="tns:obtenerOfertaSimilitudIndependienteSubsetConOfeSubsetResponse" />
+  </message>
+  <message name="ObtenerComposicionGenericoAmbulatorio">
+    <part name="parameters" element="tns:ObtenerComposicionGenericoAmbulatorio" />
+  </message>
+  <message name="ObtenerComposicionGenericoAmbulatorioResponse">
+    <part name="parameters" element="tns:ObtenerComposicionGenericoAmbulatorioResponse" />
+  </message>
+  <message name="ObtenerComposicionPresentacionAmbulatorio">
+    <part name="parameters" element="tns:ObtenerComposicionPresentacionAmbulatorio" />
+  </message>
+  <message name="ObtenerComposicionPresentacionAmbulatorioResponse">
+    <part name="parameters" element="tns:ObtenerComposicionPresentacionAmbulatorioResponse" />
+  </message>
+  <message name="ObtenerCodigoAntecedenteFamiliarPorDescriptionId">
+    <part name="parameters" element="tns:ObtenerCodigoAntecedenteFamiliarPorDescriptionId" />
+  </message>
+  <message name="ObtenerCodigoAntecedenteFamiliarPorDescriptionIdResponse">
+    <part name="parameters" element="tns:ObtenerCodigoAntecedenteFamiliarPorDescriptionIdResponse" />
+  </message>
+  <message name="informarDescripcionConsumida">
+    <part name="parameters" element="tns:informarDescripcionConsumida" />
+  </message>
+  <message name="informarDescripcionConsumidaResponse">
+    <part name="parameters" element="tns:informarDescripcionConsumidaResponse" />
+  </message>
+  <portType name="TerminologiaWS">
+    <operation name="obtenerCodigoTesauro">
+      <input message="tns:obtenerCodigoTesauro" />
+      <output message="tns:obtenerCodigoTesauroResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+    <operation name="obtenerClasificador">
+      <input message="tns:obtenerClasificador" />
+      <output message="tns:obtenerClasificadorResponse" />
+    </operation>
+    <operation name="obtenerConceptXDescID">
+      <input message="tns:obtenerConceptXDescID" />
+      <output message="tns:obtenerConceptXDescIDResponse" />
+    </operation>
+    <operation name="ObtenerModeladoHIBADescription">
+      <input message="tns:ObtenerModeladoHIBADescription" />
+      <output message="tns:ObtenerModeladoHIBADescriptionResponse" />
+    </operation>
+    <operation name="ObtenerCodigoSNMapeo">
+      <input message="tns:ObtenerCodigoSNMapeo" />
+      <output message="tns:ObtenerCodigoSNMapeoResponse" />
+    </operation>
+    <operation name="obtenerMapSetsCorrientes">
+      <input message="tns:obtenerMapSetsCorrientes" />
+      <output message="tns:obtenerMapSetsCorrientesResponse" />
+    </operation>
+    <operation name="obtenerMembers">
+      <input message="tns:obtenerMembers" />
+      <output message="tns:obtenerMembersResponse" />
+    </operation>
+    <operation name="obtenerListaDeSubsets">
+      <input message="tns:obtenerListaDeSubsets" />
+      <output message="tns:obtenerListaDeSubsetsResponse" />
+    </operation>
+    <operation name="obtenerGenericosPorTxtYSubset">
+      <input message="tns:obtenerGenericosPorTxtYSubset" />
+      <output message="tns:obtenerGenericosPorTxtYSubsetResponse" />
+    </operation>
+    <operation name="obtenerSubsetsXDescId">
+      <input message="tns:obtenerSubsetsXDescId" />
+      <output message="tns:obtenerSubsetsXDescIdResponse" />
+    </operation>
+    <operation name="obtenerAtributosDeDescription">
+      <input message="tns:obtenerAtributosDeDescription" />
+      <output message="tns:obtenerAtributosDeDescriptionResponse" />
+    </operation>
+    <operation name="obtenerOfertaTextos">
+      <input message="tns:obtenerOfertaTextos" />
+      <output message="tns:obtenerOfertaTextosResponse" />
+    </operation>
+    <operation name="obtenerOfertaTextosConCaducidad">
+      <input message="tns:obtenerOfertaTextosConCaducidad" />
+      <output message="tns:obtenerOfertaTextosConCaducidadResponse" />
+    </operation>
+    <operation name="obtenerOfertaSimilitud">
+      <input message="tns:obtenerOfertaSimilitud" />
+      <output message="tns:obtenerOfertaSimilitudResponse" />
+    </operation>
+    <operation name="obtenerDataDescriptionId">
+      <input message="tns:obtenerDataDescriptionId" />
+      <output message="tns:obtenerDataDescriptionIdResponse" />
+    </operation>
+    <operation name="obtenerAuditoriaTermino">
+      <input message="tns:obtenerAuditoriaTermino" />
+      <output message="tns:obtenerAuditoriaTerminoResponse" />
+    </operation>
+    <operation name="obtenerComposicionFarmacoXDescId">
+      <input message="tns:obtenerComposicionFarmacoXDescId" />
+      <output message="tns:obtenerComposicionFarmacoXDescIdResponse" />
+    </operation>
+    <operation name="obtenerPrompting">
+      <input message="tns:obtenerPrompting" />
+      <output message="tns:obtenerPromptingResponse" />
+    </operation>
+    <operation name="obtenerOfertaTextosIndependienteSubsetConOfeSubset">
+      <input message="tns:obtenerOfertaTextosIndependienteSubsetConOfeSubset" />
+      <output message="tns:obtenerOfertaTextosIndependienteSubsetConOfeSubsetResponse" />
+    </operation>
+    <operation name="obtenerOfertaTextosIndependienteSubset">
+      <input message="tns:obtenerOfertaTextosIndependienteSubset" />
+      <output message="tns:obtenerOfertaTextosIndependienteSubsetResponse" />
+    </operation>
+    <operation name="ObtenerAltaEfectoAdversoXHallazgoAgenteCausalYSeveridad">
+      <input message="tns:ObtenerAltaEfectoAdversoXHallazgoAgenteCausalYSeveridad" />
+      <output message="tns:ObtenerAltaEfectoAdversoXHallazgoAgenteCausalYSeveridadResponse" />
+    </operation>
+    <operation name="ObtenerCodigoAltaEfectoAdversoXAgenteCausalYSeveridad">
+      <input message="tns:ObtenerCodigoAltaEfectoAdversoXAgenteCausalYSeveridad" />
+      <output message="tns:ObtenerCodigoAltaEfectoAdversoXAgenteCausalYSeveridadResponse" />
+    </operation>
+    <operation name="obtenerCodigoAltaEfectoAdversoXHallazgoYAgenteCausal">
+      <input message="tns:obtenerCodigoAltaEfectoAdversoXHallazgoYAgenteCausal" />
+      <output message="tns:obtenerCodigoAltaEfectoAdversoXHallazgoYAgenteCausalResponse" />
+    </operation>
+    <operation name="ObtenerCodigoAltaEfectoAdversoXAgenteCausal">
+      <input message="tns:ObtenerCodigoAltaEfectoAdversoXAgenteCausal" />
+      <output message="tns:ObtenerCodigoAltaEfectoAdversoXAgenteCausalResponse" />
+    </operation>
+    <operation name="obtenerFamiliares">
+      <input message="tns:obtenerFamiliares" />
+      <output message="tns:obtenerFamiliaresResponse" />
+    </operation>
+    <operation name="obtenerClasificadorUnico">
+      <input message="tns:obtenerClasificadorUnico" />
+      <output message="tns:obtenerClasificadorUnicoResponse" />
+    </operation>
+    <operation name="obtenerMembersConceptoSubset">
+      <input message="tns:obtenerMembersConceptoSubset" />
+      <output message="tns:obtenerMembersConceptoSubsetResponse" />
+    </operation>
+    <operation name="obtenerMembersCohorte">
+      <input message="tns:obtenerMembersCohorte" />
+      <output message="tns:obtenerMembersCohorteResponse" />
+    </operation>
+    <operation name="obtenerPresentacionesComercialesXGenerico">
+      <input message="tns:obtenerPresentacionesComercialesXGenerico" />
+      <output message="tns:obtenerPresentacionesComercialesXGenericoResponse" />
+    </operation>
+    <operation name="obtenerGenericoXPresentacionComercial">
+      <input message="tns:obtenerGenericoXPresentacionComercial" />
+      <output message="tns:obtenerGenericoXPresentacionComercialResponse" />
+    </operation>
+    <operation name="obtenerMedicamentoClinicoPorMedicamentoBasico">
+      <input message="tns:obtenerMedicamentoClinicoPorMedicamentoBasico" />
+      <output message="tns:obtenerMedicamentoClinicoPorMedicamentoBasicoResponse" />
+    </operation>
+    <operation name="obtenerMedicamentoBasicoPorMedicamentoClinico">
+      <input message="tns:obtenerMedicamentoBasicoPorMedicamentoClinico" />
+      <output message="tns:obtenerMedicamentoBasicoPorMedicamentoClinicoResponse" />
+    </operation>
+    <operation name="obtenerOfertaTextosIndependienteSubsetConCaducidadYOfertaSubset">
+      <input message="tns:obtenerOfertaTextosIndependienteSubsetConCaducidadYOfertaSubset" />
+      <output message="tns:obtenerOfertaTextosIndependienteSubsetConCaducidadYOfertaSubsetResponse" />
+    </operation>
+    <operation name="obtenerOfertaSimilitudXFrecuenciaUso">
+      <input message="tns:obtenerOfertaSimilitudXFrecuenciaUso" />
+      <output message="tns:obtenerOfertaSimilitudXFrecuenciaUsoResponse" />
+    </operation>
+    <operation name="obtenerOfertaSimilitudIndependienteSubsetConOfeSubset">
+      <input message="tns:obtenerOfertaSimilitudIndependienteSubsetConOfeSubset" />
+      <output message="tns:obtenerOfertaSimilitudIndependienteSubsetConOfeSubsetResponse" />
+    </operation>
+    <operation name="ObtenerComposicionGenericoAmbulatorio">
+      <input message="tns:ObtenerComposicionGenericoAmbulatorio" />
+      <output message="tns:ObtenerComposicionGenericoAmbulatorioResponse" />
+    </operation>
+    <operation name="ObtenerComposicionPresentacionAmbulatorio">
+      <input message="tns:ObtenerComposicionPresentacionAmbulatorio" />
+      <output message="tns:ObtenerComposicionPresentacionAmbulatorioResponse" />
+    </operation>
+    <operation name="ObtenerCodigoAntecedenteFamiliarPorDescriptionId">
+      <input message="tns:ObtenerCodigoAntecedenteFamiliarPorDescriptionId" />
+      <output message="tns:ObtenerCodigoAntecedenteFamiliarPorDescriptionIdResponse" />
+    </operation>
+    <operation name="informarDescripcionConsumida">
+      <input message="tns:informarDescripcionConsumida" />
+      <output message="tns:informarDescripcionConsumidaResponse" />
+      <fault name="Exception" message="tns:Exception" />
+    </operation>
+  </portType>
+  <binding name="TerminologiaWSPortBinding" type="tns:TerminologiaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtenerCodigoTesauro">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+    <operation name="obtenerClasificador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerConceptXDescID">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerModeladoHIBADescription">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerCodigoSNMapeo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerMapSetsCorrientes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerMembers">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerListaDeSubsets">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerGenericosPorTxtYSubset">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerSubsetsXDescId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerAtributosDeDescription">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerOfertaTextos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerOfertaTextosConCaducidad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerOfertaSimilitud">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerDataDescriptionId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerAuditoriaTermino">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerComposicionFarmacoXDescId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPrompting">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerOfertaTextosIndependienteSubsetConOfeSubset">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerOfertaTextosIndependienteSubset">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerAltaEfectoAdversoXHallazgoAgenteCausalYSeveridad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerCodigoAltaEfectoAdversoXAgenteCausalYSeveridad">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerCodigoAltaEfectoAdversoXHallazgoYAgenteCausal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerCodigoAltaEfectoAdversoXAgenteCausal">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerFamiliares">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerClasificadorUnico">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerMembersConceptoSubset">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerMembersCohorte">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPresentacionesComercialesXGenerico">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerGenericoXPresentacionComercial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerMedicamentoClinicoPorMedicamentoBasico">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerMedicamentoBasicoPorMedicamentoClinico">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerOfertaTextosIndependienteSubsetConCaducidadYOfertaSubset">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerOfertaSimilitudXFrecuenciaUso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerOfertaSimilitudIndependienteSubsetConOfeSubset">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerComposicionGenericoAmbulatorio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerComposicionPresentacionAmbulatorio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ObtenerCodigoAntecedenteFamiliarPorDescriptionId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="informarDescripcionConsumida">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
+  </binding>
+  <service name="TerminologiaWSService">
+    <port name="TerminologiaWSPort" binding="tns:TerminologiaWSPortBinding">
+      <soap:address location="http://www1.hospitalitaliano.org.ar:8082/TerminologiaWSMultiContextoTest/TerminologiaWSService" />
+    </port>
+  </service>
+</definitions>

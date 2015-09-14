@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ws.hospitalitaliano.org.ar/" targetNamespace="http://ws.hospitalitaliano.org.ar/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Exception" type="tns:Exception" />
+  <xs:element name="ObtenerAltaEfectoAdversoXHallazgoAgenteCausalYSeveridad" type="tns:ObtenerAltaEfectoAdversoXHallazgoAgenteCausalYSeveridad" />
+  <xs:element name="ObtenerAltaEfectoAdversoXHallazgoAgenteCausalYSeveridadResponse" type="tns:ObtenerAltaEfectoAdversoXHallazgoAgenteCausalYSeveridadResponse" />
+  <xs:element name="ObtenerCodigoAltaEfectoAdversoXAgenteCausal" type="tns:ObtenerCodigoAltaEfectoAdversoXAgenteCausal" />
+  <xs:element name="ObtenerCodigoAltaEfectoAdversoXAgenteCausalResponse" type="tns:ObtenerCodigoAltaEfectoAdversoXAgenteCausalResponse" />
+  <xs:element name="ObtenerCodigoAltaEfectoAdversoXAgenteCausalYSeveridad" type="tns:ObtenerCodigoAltaEfectoAdversoXAgenteCausalYSeveridad" />
+  <xs:element name="ObtenerCodigoAltaEfectoAdversoXAgenteCausalYSeveridadResponse" type="tns:ObtenerCodigoAltaEfectoAdversoXAgenteCausalYSeveridadResponse" />
+  <xs:element name="ObtenerCodigoAntecedenteFamiliarPorDescriptionId" type="tns:ObtenerCodigoAntecedenteFamiliarPorDescriptionId" />
+  <xs:element name="ObtenerCodigoAntecedenteFamiliarPorDescriptionIdResponse" type="tns:ObtenerCodigoAntecedenteFamiliarPorDescriptionIdResponse" />
+  <xs:element name="ObtenerCodigoSNMapeo" type="tns:ObtenerCodigoSNMapeo" />
+  <xs:element name="ObtenerCodigoSNMapeoResponse" type="tns:ObtenerCodigoSNMapeoResponse" />
+  <xs:element name="ObtenerComposicionGenericoAmbulatorio" type="tns:ObtenerComposicionGenericoAmbulatorio" />
+  <xs:element name="ObtenerComposicionGenericoAmbulatorioResponse" type="tns:ObtenerComposicionGenericoAmbulatorioResponse" />
+  <xs:element name="ObtenerComposicionPresentacionAmbulatorio" type="tns:ObtenerComposicionPresentacionAmbulatorio" />
+  <xs:element name="ObtenerComposicionPresentacionAmbulatorioResponse" type="tns:ObtenerComposicionPresentacionAmbulatorioResponse" />
+  <xs:element name="ObtenerModeladoHIBADescription" type="tns:ObtenerModeladoHIBADescription" />
+  <xs:element name="ObtenerModeladoHIBADescriptionResponse" type="tns:ObtenerModeladoHIBADescriptionResponse" />
+  <xs:element name="informarDescripcionConsumida" type="tns:informarDescripcionConsumida" />
+  <xs:element name="informarDescripcionConsumidaResponse" type="tns:informarDescripcionConsumidaResponse" />
+  <xs:element name="obtenerAtributosDeDescription" type="tns:obtenerAtributosDeDescription" />
+  <xs:element name="obtenerAtributosDeDescriptionResponse" type="tns:obtenerAtributosDeDescriptionResponse" />
+  <xs:element name="obtenerAuditoriaTermino" type="tns:obtenerAuditoriaTermino" />
+  <xs:element name="obtenerAuditoriaTerminoResponse" type="tns:obtenerAuditoriaTerminoResponse" />
+  <xs:element name="obtenerClasificador" type="tns:obtenerClasificador" />
+  <xs:element name="obtenerClasificadorResponse" type="tns:obtenerClasificadorResponse" />
+  <xs:element name="obtenerClasificadorUnico" type="tns:obtenerClasificadorUnico" />
+  <xs:element name="obtenerClasificadorUnicoResponse" type="tns:obtenerClasificadorUnicoResponse" />
+  <xs:element name="obtenerCodigoAltaEfectoAdversoXHallazgoYAgenteCausal" type="tns:obtenerCodigoAltaEfectoAdversoXHallazgoYAgenteCausal" />
+  <xs:element name="obtenerCodigoAltaEfectoAdversoXHallazgoYAgenteCausalResponse" type="tns:obtenerCodigoAltaEfectoAdversoXHallazgoYAgenteCausalResponse" />
+  <xs:element name="obtenerCodigoTesauro" type="tns:obtenerCodigoTesauro" />
+  <xs:element name="obtenerCodigoTesauroResponse" type="tns:obtenerCodigoTesauroResponse" />
+  <xs:element name="obtenerComposicionFarmacoXDescId" type="tns:obtenerComposicionFarmacoXDescId" />
+  <xs:element name="obtenerComposicionFarmacoXDescIdResponse" type="tns:obtenerComposicionFarmacoXDescIdResponse" />
+  <xs:element name="obtenerConceptXDescID" type="tns:obtenerConceptXDescID" />
+  <xs:element name="obtenerConceptXDescIDResponse" type="tns:obtenerConceptXDescIDResponse" />
+  <xs:element name="obtenerDataDescriptionId" type="tns:obtenerDataDescriptionId" />
+  <xs:element name="obtenerDataDescriptionIdResponse" type="tns:obtenerDataDescriptionIdResponse" />
+  <xs:element name="obtenerFamiliares" type="tns:obtenerFamiliares" />
+  <xs:element name="obtenerFamiliaresResponse" type="tns:obtenerFamiliaresResponse" />
+  <xs:element name="obtenerGenericoXPresentacionComercial" type="tns:obtenerGenericoXPresentacionComercial" />
+  <xs:element name="obtenerGenericoXPresentacionComercialResponse" type="tns:obtenerGenericoXPresentacionComercialResponse" />
+  <xs:element name="obtenerGenericosPorTxtYSubset" type="tns:obtenerGenericosPorTxtYSubset" />
+  <xs:element name="obtenerGenericosPorTxtYSubsetResponse" type="tns:obtenerGenericosPorTxtYSubsetResponse" />
+  <xs:element name="obtenerListaDeSubsets" type="tns:obtenerListaDeSubsets" />
+  <xs:element name="obtenerListaDeSubsetsResponse" type="tns:obtenerListaDeSubsetsResponse" />
+  <xs:element name="obtenerMapSetsCorrientes" type="tns:obtenerMapSetsCorrientes" />
+  <xs:element name="obtenerMapSetsCorrientesResponse" type="tns:obtenerMapSetsCorrientesResponse" />
+  <xs:element name="obtenerMedicamentoBasicoPorMedicamentoClinico" type="tns:obtenerMedicamentoBasicoPorMedicamentoClinico" />
+  <xs:element name="obtenerMedicamentoBasicoPorMedicamentoClinicoResponse" type="tns:obtenerMedicamentoBasicoPorMedicamentoClinicoResponse" />
+  <xs:element name="obtenerMedicamentoClinicoPorMedicamentoBasico" type="tns:obtenerMedicamentoClinicoPorMedicamentoBasico" />
+  <xs:element name="obtenerMedicamentoClinicoPorMedicamentoBasicoResponse" type="tns:obtenerMedicamentoClinicoPorMedicamentoBasicoResponse" />
+  <xs:element name="obtenerMembers" type="tns:obtenerMembers" />
+  <xs:element name="obtenerMembersCohorte" type="tns:obtenerMembersCohorte" />
+  <xs:element name="obtenerMembersCohorteResponse" type="tns:obtenerMembersCohorteResponse" />
+  <xs:element name="obtenerMembersConceptoSubset" type="tns:obtenerMembersConceptoSubset" />
+  <xs:element name="obtenerMembersConceptoSubsetResponse" type="tns:obtenerMembersConceptoSubsetResponse" />
+  <xs:element name="obtenerMembersResponse" type="tns:obtenerMembersResponse" />
+  <xs:element name="obtenerOfertaSimilitud" type="tns:obtenerOfertaSimilitud" />
+  <xs:element name="obtenerOfertaSimilitudIndependienteSubsetConOfeSubset" type="tns:obtenerOfertaSimilitudIndependienteSubsetConOfeSubset" />
+  <xs:element name="obtenerOfertaSimilitudIndependienteSubsetConOfeSubsetResponse" type="tns:obtenerOfertaSimilitudIndependienteSubsetConOfeSubsetResponse" />
+  <xs:element name="obtenerOfertaSimilitudResponse" type="tns:obtenerOfertaSimilitudResponse" />
+  <xs:element name="obtenerOfertaSimilitudXFrecuenciaUso" type="tns:obtenerOfertaSimilitudXFrecuenciaUso" />
+  <xs:element name="obtenerOfertaSimilitudXFrecuenciaUsoResponse" type="tns:obtenerOfertaSimilitudXFrecuenciaUsoResponse" />
+  <xs:element name="obtenerOfertaTextos" type="tns:obtenerOfertaTextos" />
+  <xs:element name="obtenerOfertaTextosConCaducidad" type="tns:obtenerOfertaTextosConCaducidad" />
+  <xs:element name="obtenerOfertaTextosConCaducidadResponse" type="tns:obtenerOfertaTextosConCaducidadResponse" />
+  <xs:element name="obtenerOfertaTextosIndependienteSubset" type="tns:obtenerOfertaTextosIndependienteSubset" />
+  <xs:element name="obtenerOfertaTextosIndependienteSubsetConCaducidadYOfertaSubset" type="tns:obtenerOfertaTextosIndependienteSubsetConCaducidadYOfertaSubset" />
+  <xs:element name="obtenerOfertaTextosIndependienteSubsetConCaducidadYOfertaSubsetResponse" type="tns:obtenerOfertaTextosIndependienteSubsetConCaducidadYOfertaSubsetResponse" />
+  <xs:element name="obtenerOfertaTextosIndependienteSubsetConOfeSubset" type="tns:obtenerOfertaTextosIndependienteSubsetConOfeSubset" />
+  <xs:element name="obtenerOfertaTextosIndependienteSubsetConOfeSubsetResponse" type="tns:obtenerOfertaTextosIndependienteSubsetConOfeSubsetResponse" />
+  <xs:element name="obtenerOfertaTextosIndependienteSubsetResponse" type="tns:obtenerOfertaTextosIndependienteSubsetResponse" />
+  <xs:element name="obtenerOfertaTextosResponse" type="tns:obtenerOfertaTextosResponse" />
+  <xs:element name="obtenerPresentacionesComercialesXGenerico" type="tns:obtenerPresentacionesComercialesXGenerico" />
+  <xs:element name="obtenerPresentacionesComercialesXGenericoResponse" type="tns:obtenerPresentacionesComercialesXGenericoResponse" />
+  <xs:element name="obtenerPrompting" type="tns:obtenerPrompting" />
+  <xs:element name="obtenerPromptingResponse" type="tns:obtenerPromptingResponse" />
+  <xs:element name="obtenerSubsetsXDescId" type="tns:obtenerSubsetsXDescId" />
+  <xs:element name="obtenerSubsetsXDescIdResponse" type="tns:obtenerSubsetsXDescIdResponse" />
+  <xs:complexType name="ObtenerComposicionPresentacionAmbulatorio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerComposicionPresentacionAmbulatorioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:composicionPresentacionAmbulatorioCabecera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="composicionPresentacionAmbulatorioCabecera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantidadComposicion" type="xs:float" />
+      <xs:element minOccurs="0" name="descripcionAMP" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionUniMed" type="xs:string" />
+      <xs:element minOccurs="0" name="descriptionIdAMP" type="xs:long" />
+      <xs:element minOccurs="0" name="descriptionIdUniMed" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerCodigoAntecedenteFamiliarPorDescriptionId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="ctIdSN" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerCodigoAntecedenteFamiliarPorDescriptionIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMedicamentoClinicoPorMedicamentoBasico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMedicamentoClinicoPorMedicamentoBasicoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:member" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="member">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerSubsetsXDescId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="flag" type="xs:string" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerSubsetsXDescIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:subset" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="subset">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="subsetid" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaTextosIndependienteSubsetConCaducidadYOfertaSubset">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="texto" type="xs:string" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaTextosIndependienteSubsetConCaducidadYOfertaSubsetResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ofertaTextoCabeceraConCaducidadConOfeSubset" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ofertaTextoCabeceraConCaducidadConOfeSubset">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="caducidad" type="xs:string" />
+      <xs:element minOccurs="0" name="dominios" type="xs:string" />
+      <xs:element minOccurs="0" name="entrada" type="xs:string" />
+      <xs:element minOccurs="0" name="explicacion" type="xs:string" />
+      <xs:element minOccurs="0" name="idDescripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idDescripcionPreferido" type="xs:string" />
+      <xs:element minOccurs="0" name="legible" type="xs:string" />
+      <xs:element minOccurs="0" name="multiplicidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ofertaTextoDetalle" nillable="true" type="tns:ofertaTextoDetalleConCaducidadConOfeSubset" />
+      <xs:element minOccurs="0" name="refinacionObligatoria" type="xs:string" />
+      <xs:element minOccurs="0" name="textoPreferido" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ofertaTextoDetalleConCaducidadConOfeSubset">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="caducidad" type="xs:string" />
+      <xs:element minOccurs="0" name="conceptId" type="xs:long" />
+      <xs:element minOccurs="0" name="descriptionId" type="xs:long" />
+      <xs:element minOccurs="0" name="dominios" type="xs:string" />
+      <xs:element minOccurs="0" name="texto" type="xs:string" />
+      <xs:element minOccurs="0" name="textoOrigenSimilitud" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMembers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subsetId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMembersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:member" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerAltaEfectoAdversoXHallazgoAgenteCausalYSeveridad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="textoHallazgoEfectoAdverso" type="xs:string" />
+      <xs:element minOccurs="0" name="descIdHallazgo" type="xs:long" />
+      <xs:element minOccurs="0" name="descIdAgenteCausal" type="xs:long" />
+      <xs:element minOccurs="0" name="descIdSeveridad" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerAltaEfectoAdversoXHallazgoAgenteCausalYSeveridadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:terminoPostCoordinado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="terminoPostCoordinado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descriptionId" type="xs:long" />
+      <xs:element minOccurs="0" name="mensajeResultado" type="xs:string" />
+      <xs:element minOccurs="0" name="textoDescription" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerFamiliares">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerFamiliaresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:familiar" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="familiar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="conceptid" type="xs:long" />
+      <xs:element minOccurs="0" name="descripcionFamiliar" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerAtributosDeDescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerAtributosDeDescriptionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:descriptionAtributo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="descriptionAtributo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="frecuenciaUso" type="xs:long" />
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerDataDescriptionId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerDataDescriptionIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:descripcionDataAtributo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="descripcionDataAtributo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditoriaTermino" type="xs:string" />
+      <xs:element minOccurs="0" name="conceptid" type="xs:long" />
+      <xs:element minOccurs="0" name="descripcionTermino" type="xs:string" />
+      <xs:element minOccurs="0" name="frecuenciaUso" type="xs:long" />
+      <xs:element minOccurs="0" name="terminoPreferido" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoTermino" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerCodigoAltaEfectoAdversoXHallazgoYAgenteCausal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="textoHallazgoEfectoAdverso" type="xs:string" />
+      <xs:element minOccurs="0" name="descIdHallazgo" type="xs:long" />
+      <xs:element minOccurs="0" name="descIdAgenteCausal" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerCodigoAltaEfectoAdversoXHallazgoYAgenteCausalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:terminoPostCoordinado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerClasificadorUnico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="mapSetId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerClasificadorUnicoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:clasificador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="clasificador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerClasificador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="mapSetId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerClasificadorResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:clasificador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="informarDescripcionConsumida">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="informarDescripcionConsumidaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaTextosIndependienteSubset">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="texto" type="xs:string" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaTextosIndependienteSubsetResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ofertaTextoCabecera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ofertaTextoCabecera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dominios" type="xs:string" />
+      <xs:element minOccurs="0" name="entrada" type="xs:string" />
+      <xs:element minOccurs="0" name="explicacion" type="xs:string" />
+      <xs:element minOccurs="0" name="idDescripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idDescripcionPreferido" type="xs:string" />
+      <xs:element minOccurs="0" name="legible" type="xs:string" />
+      <xs:element minOccurs="0" name="multiplicidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ofertaTextoDetalle" nillable="true" type="tns:ofertaTextoDetalle" />
+      <xs:element minOccurs="0" name="refinacionObligatoria" type="xs:string" />
+      <xs:element minOccurs="0" name="textoPreferido" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ofertaTextoDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="conceptId" type="xs:long" />
+      <xs:element minOccurs="0" name="descriptionId" type="xs:long" />
+      <xs:element minOccurs="0" name="texto" type="xs:string" />
+      <xs:element minOccurs="0" name="textoOrigenSimilitud" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMapSetsCorrientes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMapSetsCorrientesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:mapSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="mapSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerAuditoriaTermino">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="texto" type="xs:string" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerAuditoriaTerminoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:terminoAuditado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="terminoAuditado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditoria" type="xs:string" />
+      <xs:element minOccurs="0" name="descriptionid" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerConceptXDescID">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerConceptXDescIDResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:concept" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="concept">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="concId" type="xs:long" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerCodigoSNMapeo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerCodigoSNMapeoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerCodigoAltaEfectoAdversoXAgenteCausalYSeveridad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="textoHallazgoEfectoAdverso" type="xs:string" />
+      <xs:element minOccurs="0" name="descIdAgenteCausal" type="xs:long" />
+      <xs:element minOccurs="0" name="descIdSeveridad" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerCodigoAltaEfectoAdversoXAgenteCausalYSeveridadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:terminoPostCoordinado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerCodigoAltaEfectoAdversoXAgenteCausal">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="textoHallazgoEfectoAdverso" type="xs:string" />
+      <xs:element minOccurs="0" name="descIdAgenteCausal" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerCodigoAltaEfectoAdversoXAgenteCausalResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:terminoPostCoordinado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerComposicionFarmacoXDescId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerComposicionFarmacoXDescIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:composicionFarmaco" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="composicionFarmaco">
+    <xs:sequence>
+      <xs:element name="cantidadSustancia" type="xs:double" />
+      <xs:element minOccurs="0" name="descIdFormaFarma" type="xs:long" />
+      <xs:element minOccurs="0" name="descIdSustancia" type="xs:long" />
+      <xs:element minOccurs="0" name="descIdUnidadMedida" type="xs:long" />
+      <xs:element minOccurs="0" name="descIdViaAdm" type="xs:long" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionSustancia" type="xs:string" />
+      <xs:element minOccurs="0" name="formaFarmaceutica" type="xs:string" />
+      <xs:element minOccurs="0" name="unidadMedida" type="xs:string" />
+      <xs:element minOccurs="0" name="viaAdministracionPreferida" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerCodigoTesauro">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="termino" type="xs:string" />
+      <xs:element minOccurs="0" name="subsetId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerCodigoTesauroResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerListaDeSubsets">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerListaDeSubsetsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:subset" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaTextosIndependienteSubsetConOfeSubset">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="texto" type="xs:string" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaTextosIndependienteSubsetConOfeSubsetResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ofertaTextoCabeceraConSubset" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ofertaTextoCabeceraConSubset">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dominios" type="xs:string" />
+      <xs:element minOccurs="0" name="entrada" type="xs:string" />
+      <xs:element minOccurs="0" name="explicacion" type="xs:string" />
+      <xs:element minOccurs="0" name="idDescripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idDescripcionPreferido" type="xs:string" />
+      <xs:element minOccurs="0" name="legible" type="xs:string" />
+      <xs:element minOccurs="0" name="multiplicidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ofertaTextoDetalle" nillable="true" type="tns:ofertaTextoDetalleConSubset" />
+      <xs:element minOccurs="0" name="refinacionObligatoria" type="xs:string" />
+      <xs:element minOccurs="0" name="textoPreferido" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ofertaTextoDetalleConSubset">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="conceptId" type="xs:long" />
+      <xs:element minOccurs="0" name="descriptionId" type="xs:long" />
+      <xs:element minOccurs="0" name="dominios" type="xs:string" />
+      <xs:element minOccurs="0" name="texto" type="xs:string" />
+      <xs:element minOccurs="0" name="textoOrigenSimilitud" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaSimilitudIndependienteSubsetConOfeSubset">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="texto" type="xs:string" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaSimilitudIndependienteSubsetConOfeSubsetResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:descripcionSimilitud" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="descripcionSimilitud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descriptionid" type="xs:long" />
+      <xs:element minOccurs="0" name="frecuencia" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetid" type="xs:long" />
+      <xs:element minOccurs="0" name="termino" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaTextosConCaducidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="texto" type="xs:string" />
+      <xs:element minOccurs="0" name="subsetId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaTextosConCaducidadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ofertaTextoCabeceraConCaducidad" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ofertaTextoCabeceraConCaducidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="caducidad" type="xs:string" />
+      <xs:element minOccurs="0" name="dominios" type="xs:string" />
+      <xs:element minOccurs="0" name="entrada" type="xs:string" />
+      <xs:element minOccurs="0" name="explicacion" type="xs:string" />
+      <xs:element minOccurs="0" name="idDescripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idDescripcionPreferido" type="xs:string" />
+      <xs:element minOccurs="0" name="legible" type="xs:string" />
+      <xs:element minOccurs="0" name="multiplicidad" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ofertaTextoDetalle" nillable="true" type="tns:ofertaTextoDetalleConCaducidad" />
+      <xs:element minOccurs="0" name="refinacionObligatoria" type="xs:string" />
+      <xs:element minOccurs="0" name="textoPreferido" type="xs:string" />
+      <xs:element minOccurs="0" name="titulo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ofertaTextoDetalleConCaducidad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="caducidad" type="xs:string" />
+      <xs:element minOccurs="0" name="conceptId" type="xs:long" />
+      <xs:element minOccurs="0" name="descriptionId" type="xs:long" />
+      <xs:element minOccurs="0" name="texto" type="xs:string" />
+      <xs:element minOccurs="0" name="textoOrigenSimilitud" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaTextos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="texto" type="xs:string" />
+      <xs:element minOccurs="0" name="subsetId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaTextosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ofertaTextoCabecera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPrompting">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="substring" type="xs:string" />
+      <xs:element minOccurs="0" name="subsetid" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPromptingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaSimilitud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="texto" type="xs:string" />
+      <xs:element minOccurs="0" name="subsetId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaSimilitudResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:descripcionSimilitud" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMembersConceptoSubset">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subsetId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMembersConceptoSubsetResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:concept" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaSimilitudXFrecuenciaUso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="texto" type="xs:string" />
+      <xs:element minOccurs="0" name="subsetId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerOfertaSimilitudXFrecuenciaUsoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:descripcionSimilitud" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMembersCohorte">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subsetId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMembersCohorteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:member" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerGenericosPorTxtYSubset">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="txt" type="xs:string" />
+      <xs:element minOccurs="0" name="subsetId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerGenericosPorTxtYSubsetResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:member" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPresentacionesComercialesXGenerico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerPresentacionesComercialesXGenericoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:member" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerComposicionGenericoAmbulatorio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerComposicionGenericoAmbulatorioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:composicionGenericoAmbulatorioCabecera" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="composicionGenericoAmbulatorioCabecera">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descripcionFormaFarmaVMP" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionUniAsistVMP" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionUniMedVMP" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionVMP" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionViaAdmVMP" type="xs:string" />
+      <xs:element minOccurs="0" name="descriptionIdFormaFarmaVMP" type="xs:long" />
+      <xs:element minOccurs="0" name="descriptionIdUniAsistVMP" type="xs:long" />
+      <xs:element minOccurs="0" name="descriptionIdUniMedVMP" type="xs:long" />
+      <xs:element minOccurs="0" name="descriptionIdVMP" type="xs:long" />
+      <xs:element minOccurs="0" name="descriptionIdViaAdmVMP" type="xs:long" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="genericoAmbulatorioDetalles" nillable="true" type="tns:composicionGenericoAmbulatorioDetalle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="composicionGenericoAmbulatorioDetalle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantidadSustancia" type="xs:float" />
+      <xs:element minOccurs="0" name="descripcionSustancia" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionUniMedSustancia" type="xs:string" />
+      <xs:element minOccurs="0" name="descriptionIdSustancia" type="xs:long" />
+      <xs:element minOccurs="0" name="descriptionIdUniMedSustancia" type="xs:long" />
+      <xs:element minOccurs="0" name="nivelRelevanciaSustancia" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerModeladoHIBADescription">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ObtenerModeladoHIBADescriptionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:modeladoPostCoordinacionHIBA" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modeladoPostCoordinacionHIBA">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="conceptidSN" type="xs:long" />
+      <xs:element minOccurs="0" name="definicionTerminoTesauro" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionConceptoSN" type="xs:string" />
+      <xs:element minOccurs="0" name="descripcionRelacion" type="xs:string" />
+      <xs:element minOccurs="0" name="descriptionid" type="xs:long" />
+      <xs:element minOccurs="0" name="grupo" type="xs:long" />
+      <xs:element minOccurs="0" name="relationId" type="xs:long" />
+      <xs:element minOccurs="0" name="terminoTesauro" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMedicamentoBasicoPorMedicamentoClinico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMedicamentoBasicoPorMedicamentoClinicoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:member" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerGenericoXPresentacionComercial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="descId" type="xs:long" />
+      <xs:element minOccurs="0" name="subsetIdInstitucion" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerGenericoXPresentacionComercialResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:member" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

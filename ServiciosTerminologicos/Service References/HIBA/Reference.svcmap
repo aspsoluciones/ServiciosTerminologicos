@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8d3c4a25-9acc-411e-a191-d06a115d442e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://www1.hospitalitaliano.org.ar:8082/TerminologiaWSMultiContextoTest/TerminologiaWSService?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TerminologiaWSService.wsdl" MetadataType="Wsdl" ID="6b2a9578-cb4d-48fc-a3db-c3b2c5f99b35" SourceId="1" SourceUrl="http://www1.hospitalitaliano.org.ar:8082/TerminologiaWSMultiContextoTest/TerminologiaWSService?wsdl" />
+    <MetadataFile FileName="TerminologiaWSService.xsd" MetadataType="Schema" ID="576c2199-0d6d-49dd-9e55-95ed171fff88" SourceId="1" SourceUrl="http://www1.hospitalitaliano.org.ar:8082/TerminologiaWSMultiContextoTest/TerminologiaWSService?xsd=1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
