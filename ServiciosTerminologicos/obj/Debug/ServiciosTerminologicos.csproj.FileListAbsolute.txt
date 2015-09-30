@@ -7,3 +7,12 @@ C:\Documents and Settings\pab\My Documents\Visual Studio 2008\Projects\Servicios
 C:\Documents and Settings\pab\My Documents\Visual Studio 2008\Projects\ServiciosTerminologicos\ServiciosTerminologicos\obj\Debug\ServiciosTerminologicos.csproj.GenerateResource.Cache
 C:\Documents and Settings\pab\My Documents\Visual Studio 2008\Projects\ServiciosTerminologicos\ServiciosTerminologicos\obj\Debug\ServiciosTerminologicos.exe
 C:\Documents and Settings\pab\My Documents\Visual Studio 2008\Projects\ServiciosTerminologicos\ServiciosTerminologicos\obj\Debug\ServiciosTerminologicos.pdb
+C:\Documents and Settings\pab\My Documents\GitHub\ServiciosTerminologicos\ServiciosTerminologicos\bin\Debug\ServiciosTerminologicos.exe.config
+C:\Documents and Settings\pab\My Documents\GitHub\ServiciosTerminologicos\ServiciosTerminologicos\obj\Debug\ServiciosTerminologicos.exe
+C:\Documents and Settings\pab\My Documents\GitHub\ServiciosTerminologicos\ServiciosTerminologicos\obj\Debug\ServiciosTerminologicos.pdb
+C:\Documents and Settings\pab\My Documents\GitHub\ServiciosTerminologicos\ServiciosTerminologicos\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\pab\My Documents\GitHub\ServiciosTerminologicos\ServiciosTerminologicos\obj\Debug\ServiciosTerminologicos.Properties.Resources.resources
+C:\Documents and Settings\pab\My Documents\GitHub\ServiciosTerminologicos\ServiciosTerminologicos\obj\Debug\ServiciosTerminologicos.csproj.GenerateResource.Cache
+C:\Documents and Settings\pab\My Documents\GitHub\ServiciosTerminologicos\ServiciosTerminologicos\bin\Debug\ServiciosTerminologicos.exe
+C:\Documents and Settings\pab\My Documents\GitHub\ServiciosTerminologicos\ServiciosTerminologicos\bin\Debug\ServiciosTerminologicos.pdb
+C:\Documents and Settings\pab\My Documents\GitHub\ServiciosTerminologicos\ServiciosTerminologicos\obj\Debug\ServiciosTerminologicos.Form1.resources
