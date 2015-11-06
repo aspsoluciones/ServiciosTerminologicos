@@ -15,8 +15,10 @@ namespace ServiciosTerminologicos
         private TerminologiaWSClient ws = new TerminologiaWSClient();
         private long subsetIdInstitucion = 34701000999132; // id de cliente aspsoluciones
 
-        private long dominioSustancias = 591000999139; //SUSTANCIAS
-        private long dominioProblemas = 601000999132; // se podria tener una lista de dominios
+        private long dominioSustancias = 591000999139;         // SUSTANCIAS
+        private long dominioProblemas = 601000999132;          // PROBLEMAS
+        private long dominioGenericos = 31021000999137;        // VTM generico con componente activo
+        private long dominioGenericosConInfo = 31031000999139; // AMPP generico con componente activo, potencia y dosis
 
         public Form1()
         {
@@ -25,14 +27,43 @@ namespace ServiciosTerminologicos
             // Combobox initialization
             comboBox1.Items.Add(new ComboboxItem("Sustancias", dominioSustancias));
             comboBox1.Items.Add(new ComboboxItem("Problemas", dominioProblemas));
+            comboBox1.Items.Add(new ComboboxItem("Generico + Info", dominioGenericosConInfo));
 
 
             // carga mapsets corrientes
             mapSet[] ms = ws.obtenerMapSetsCorrientes(subsetIdInstitucion);
+            textBox6.Text += "MapSets Corrientes:" + Environment.NewLine;
             foreach (mapSet m in ms)
             {
                 textBox6.Text += "id: " + m.id + " desc: " + m.descripcion + Environment.NewLine;
             }
+
+
+            // ============================================ MEMBERS ============================================= //
+            member[] members = ws.obtenerMembers(dominioGenericos, subsetIdInstitucion);
+            int max_results = 20;
+            int idx = 0;
+
+            textBox6.Text += Environment.NewLine;
+            textBox6.Text += "Members:" + Environment.NewLine;
+            foreach (member m in members)
+            {
+                textBox6.AppendText(m.descripcion + "( descId: " + m.descId + ")" + Environment.NewLine);
+                idx++;
+                if (idx > max_results) break; // just render max_results
+            }
+
+            /*
+            // Write file with members (test)
+            String texto = "";
+            foreach (member m in members)
+            {
+                texto += m.descripcion + "( descId: " + m.descId + ")" + Environment.NewLine;
+            }
+            System.IO.File.WriteAllText(@".\members.txt", texto);
+            */
+            // ============================================ MEMBERS ============================================= //
+
 
             // la doc habla de un servicio de lista de dominios que no está declarado en el WSDL
             // idem para el servicio de elementos del dominio, esta en la doc, no en el WSDL
@@ -43,12 +74,14 @@ namespace ServiciosTerminologicos
             long cie10mapSetId = 101045;
             clasificador[] clasificadores = ws.obtenerClasificador(dolorDePechoDescId, cie10mapSetId, subsetIdInstitucion);
 
+
             textBox6.Text += Environment.NewLine;
             textBox6.Text += "test clasificador de 'dolor de pecho' en CIE10:" + Environment.NewLine;
             foreach (clasificador clasificador in clasificadores)
             {
                 textBox6.Text += clasificador.id + " " + clasificador.descripcion + Environment.NewLine;
             }
+
 
             textBox6.Text += Environment.NewLine;
             textBox6.Text += "Lista de subsets " + Environment.NewLine;
@@ -71,6 +104,7 @@ namespace ServiciosTerminologicos
             }
 
             long subset = (long)item.value;
+
 
             ofertaTextoCabecera res = ws.obtenerOfertaTextos(txt, subset, subsetIdInstitucion); // item.value es el id de subset
 
@@ -183,24 +217,38 @@ namespace ServiciosTerminologicos
                     textBox8.AppendText(c.descripcion + " " + c.descripcionSustancia + " " + c.formaFarmaceutica + " " + c.cantidadSustancia + " " + c.unidadMedida + " " + c.viaAdministracionPreferida + Environment.NewLine);
                 }
             }
-            
-            member[] mms = ws.obtenerGenericoXPresentacionComercial(descId, subsetIdInstitucion);
+
+            member[] mms = ws.obtenerPresentacionesComercialesXGenerico(descId, subsetIdInstitucion);
+            textBox8.AppendText("Presentaciones Comerciales X Generico" + Environment.NewLine);
             foreach (member m in mms)
             {
                 textBox8.AppendText(m.descripcion + Environment.NewLine);
             }
 
-            ws.obtenerMedicamentoClinicoPorMedicamentoBasico(descId, subsetIdInstitucion);
+            
+            mms = ws.obtenerGenericoXPresentacionComercial(descId, subsetIdInstitucion);
+            textBox8.AppendText("Generico X Presentacion Comercial" + Environment.NewLine);
             foreach (member m in mms)
             {
                 textBox8.AppendText(m.descripcion + Environment.NewLine);
             }
+
+
+            mms = ws.obtenerMedicamentoClinicoPorMedicamentoBasico(descId, subsetIdInstitucion);
+            textBox8.AppendText("Medicamento Clinico Por Medicamento Basico" + Environment.NewLine);
+            foreach (member m in mms)
+            {
+                textBox8.AppendText(m.descripcion + Environment.NewLine);
+            }
+
 
             mms = ws.obtenerMedicamentoBasicoPorMedicamentoClinico(descId, subsetIdInstitucion);
+            textBox8.AppendText("Medicamento Basico Por Medicamento Clinico" + Environment.NewLine);
             foreach (member m in mms)
             {
                 textBox8.AppendText(m.descripcion + Environment.NewLine);
             }
+
 
             composicionGenericoAmbulatorioCabecera cgac = ws.ObtenerComposicionGenericoAmbulatorio(descId, subsetIdInstitucion);
             composicionGenericoAmbulatorioDetalle[] cgad = cgac.genericoAmbulatorioDetalles;
@@ -217,6 +265,16 @@ namespace ServiciosTerminologicos
             }
 
             //composicionPresentacionAmbulatorioCabecera cpac = ws.ObtenerComposicionPresentacionAmbulatorio(descId, subsetIdInstitucion);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            String txt = textBoxGenerico.Text;
+            member[] res = ws.obtenerGenericosPorTxtYSubset(txt, dominioGenericosConInfo, subsetIdInstitucion);
+            foreach (member m in res)
+            {
+                textBox10.AppendText(m.descripcion +"( descId: "+ m.descId +")"+ Environment.NewLine);
+            }
         }
 
     }
